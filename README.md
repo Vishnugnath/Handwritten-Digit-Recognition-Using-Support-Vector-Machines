@@ -1,3 +1,4 @@
+
 # Handwritten Digit Recognition Using Support Vector Machines
 
 This project implements handwritten digit recognition using Support Vector Machines (SVM) on the MNIST dataset. The goal is to classify images of handwritten digits (0-9) into their corresponding digit labels.
@@ -52,41 +53,6 @@ pip install numpy pandas scikit-learn matplotlib
 
 1. Open the Jupyter notebook `Handwritten Digit Recognition Using Support Vector Machines.ipynb`.
 2. Run each cell in the notebook to load the dataset, preprocess the data, train the SVM model, and evaluate its performance.
-
-### Code Example
-
-Here’s a brief overview of how to load the dataset and train the SVM model:
-
-```python
-from sklearn.datasets import fetch_openml
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
-from sklearn.metrics import classification_report, confusion_matrix
-
-# Load the dataset
-mnist = fetch_openml('mnist_784', version=1, parser='auto')
-X, y = mnist.data, mnist.target
-
-# Split into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Scale the data
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-
-# Train the SVM classifier
-svm_classifier = SVC(kernel='rbf', C=1, gamma='scale')
-svm_classifier.fit(X_train, y_train)
-
-# Make predictions
-y_pred = svm_classifier.predict(X_test)
-
-# Evaluate the model
-print(confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
-```
 
 ## Results
 
