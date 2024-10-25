@@ -1,4 +1,3 @@
-
 # Handwritten Digit Recognition Using Support Vector Machines
 
 This project implements handwritten digit recognition using Support Vector Machines (SVM) on the MNIST dataset. The goal is to classify images of handwritten digits (0-9) into their corresponding digit labels.
@@ -12,6 +11,7 @@ This project implements handwritten digit recognition using Support Vector Machi
 - [Usage](#usage)
 - [Results](#results)
 - [Conclusion](#conclusion)
+- [License](#license)
 
 ## Overview
 
@@ -19,7 +19,7 @@ The MNIST dataset contains 70,000 images of handwritten digits, where each image
 
 ## Dataset
 
-- **Source**: The dataset can be accessed via Scikit-learn using the `fetch_openml` function.
+- **Source**: The dataset is accessed using Scikit-learn's `fetch_openml` function.
 - **Size**: 60,000 training images and 10,000 testing images.
 - **Format**: Each image is labeled with the corresponding digit (0-9).
 
@@ -40,11 +40,11 @@ pip install numpy pandas scikit-learn matplotlib
 
 ## Installation
 
-1. Clone this repository or download the Jupyter notebook file.
+1. Clone this repository:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Vishnugnath/Handwritten-Digit-Recognition-Using-Support-Vector-Machines.git
+   cd Handwritten-Digit-Recognition-Using-Support-Vector-Machines
    ```
 
 2. Ensure you have the required libraries installed as mentioned above.
@@ -52,12 +52,20 @@ pip install numpy pandas scikit-learn matplotlib
 ## Usage
 
 1. Open the Jupyter notebook `Handwritten Digit Recognition Using Support Vector Machines.ipynb`.
-2. Run each cell in the notebook to load the dataset, preprocess the data, train the SVM model, and evaluate its performance.
+2. Run each cell in the notebook to:
+   - Load the dataset
+   - Preprocess the data
+   - Train the SVM model
+   - Evaluate the model's performance
 
 ## Results
 
-After training the model, the performance metrics, including accuracy, precision, recall, and F1 score, are printed out. A confusion matrix is also generated to visualize the classification results.
+After training the model, performance metrics including accuracy, precision, recall, and F1 score are calculated. A confusion matrix is also generated to visualize the classification results, providing insights into the accuracy of each digit classification.
 
 ## Conclusion
 
-This project demonstrates how to implement handwritten digit recognition using SVM on the MNIST dataset. The model achieves satisfactory accuracy and can be further improved through hyperparameter tuning and advanced techniques.
+This project demonstrates how to implement handwritten digit recognition using SVM on the MNIST dataset. The SVM classifier achieves satisfactory accuracy and can be further improved through hyperparameter tuning and more advanced techniques like deep learning.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
